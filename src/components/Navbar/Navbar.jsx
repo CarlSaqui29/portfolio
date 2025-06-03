@@ -16,7 +16,8 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <>
+    <Disclosure as="nav" className="sticky top-0 z-50 bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -64,7 +65,7 @@ export default function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faGithub}
-                className="text-2xl text-gray-400 hover:text-white"
+                className="text-xl text-gray-400 hover:text-white"
               />
             </a>
             <a
@@ -76,7 +77,7 @@ export default function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-2xl text-gray-400 hover:text-white"
+                className="text-xl text-gray-400 hover:text-white"
               />
             </a>
             <a
@@ -88,7 +89,7 @@ export default function Navbar() {
             >
               <FontAwesomeIcon
                 icon={faDribbble}
-                className="text-2xl text-gray-400 hover:text-white"
+                className="text-xl text-gray-400 hover:text-white"
               />
             </a>
 
@@ -115,5 +116,6 @@ export default function Navbar() {
         </div>
       </DisclosurePanel>
     </Disclosure>
+  </>
   )
 }
