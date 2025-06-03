@@ -1,10 +1,14 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+
 export default function Bento() {
   return (
     <div className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-center text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
+        <h2 className="text-center text-base/7 font-semibold text-indigo-600">About Me</h2>
         <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl">
-          Everything you need to deploy your app
+          Developing my skills while reaching my dreams
         </p>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-2">
@@ -12,7 +16,7 @@ export default function Bento() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Mobile friendly
+                  Aspiring Basketball Player
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
@@ -34,7 +38,7 @@ export default function Bento() {
             <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-4xl"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Designer</p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
                 </p>
@@ -53,7 +57,7 @@ export default function Bento() {
             <div className="absolute inset-px rounded-lg bg-white"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Car Enthusiast</p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
                 </p>
@@ -73,7 +77,7 @@ export default function Bento() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                  Powerful APIs
+                  Software Developer
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                   Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
@@ -84,12 +88,21 @@ export default function Bento() {
                   <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                     <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
                       <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
-                        NotificationSetting.jsx
+                        payDebt.jsx
                       </div>
-                      <div className="border-r border-gray-600/10 px-4 py-2">App.jsx</div>
+                      <div className="border-r border-gray-600/10 px-4 py-2">configLife.jsx</div>
                     </div>
                   </div>
-                  <div className="px-6 pt-6 pb-14">{/* Your code example */}</div>
+                  <div className="px-6 pt-6 pb-14">
+                    <SyntaxHighlighter 
+                      language="jsx" 
+                      style={nightOwl}
+                      wrapLongLines={true}
+                      customStyle={{ fontSize: '12px', overflow: 'hidden' }}
+                    >
+                      {`import { love, support } from 'family'\nimport { code, design } from 'career'\nimport { grind, bounceBack } from 'basketball'\nimport { build, tune } from 'carCulture'\nimport { useState } from 'react'\n\nfunction CarlLife() {\n  const [energy, setEnergy] = useState(100)\n\n  return (\n\t<Life fueledBy={[love, support]}>\n\t  <Code passion />\n\t  <Design soul />\n\t  <Court grind={grind} dream="NBA" />\n\t  <Garage project="Honda EF" vibe="stanced" />\n\t  <Goals target="Senior Dev by 28" />\n\t</Life>\n  )\n}`}
+                    </SyntaxHighlighter>
+                  </div>
                 </div>
               </div>
             </div>
