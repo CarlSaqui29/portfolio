@@ -7,7 +7,7 @@ import bro from '../../assets/bro.jpg';
 const navigation = [
   { name: 'About Me', href: '#', current: true },
   { name: 'Projects', href: '#', current: false },
-  { name: 'Hobbies', href: '#', current: false },
+  { name: 'Lab', href: '#', current: false },
 ]
 
 function classNames(...classes) {
