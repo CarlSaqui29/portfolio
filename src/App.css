@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(
+    to right,
+    #282829 0px,
+    #282829 1px,
+    transparent 1px,
+    transparent 130px
+  );
+  background-color: #121316;
+}
+
+.bg-bento {
+  background-color: hsla(0,0%,100%,.03);
+}
+
+.text-indigo-custom {
+  color: #8b54ff;
+}
