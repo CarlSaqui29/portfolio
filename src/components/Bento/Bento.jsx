@@ -1,8 +1,52 @@
+import { useState, useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+const fullCode = `
+import { love, support } from 'family'
+import { code, design } from 'career'
+import { grind, bounceBack } from 'basketball'
+import { build, tune } from 'carCulture'
+import { useState } from 'react'
+
+function CarlLife() {
+  const [energy, setEnergy] = useState(100)
+
+  return (
+\t<Life fueledBy={[love, support]}>
+\t  <Code passion />
+\t  <Design soul />
+\t  <Court grind={grind} dream="NBA" />
+\t  <Garage project="Honda EF" vibe="stanced" />
+\t  <Goals target="Senior Dev by 28" />
+\t</Life>
+  )
+}
+`;
 
 export default function Bento() {
+  const [typedCode, setTypedCode] = useState('');
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    let timeout;
+
+    if (index < fullCode.length) {
+      timeout = setTimeout(() => {
+        setTypedCode((prev) => prev + fullCode[index]);
+        setIndex(index + 1);
+      }, 20); // Typing speed
+    } else {
+      // Pause 2s then reset
+      timeout = setTimeout(() => {
+        setTypedCode('');
+        setIndex(0);
+      }, 2000);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [index]);
+  
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
@@ -93,14 +137,14 @@ export default function Bento() {
                       <div className="border-r border-gray-600/10 px-4 py-2">configLife.jsx</div>
                     </div>
                   </div>
-                  <div className="px-6 pt-6 pb-14">
+                  <div className="pl-6 pb-14">
                     <SyntaxHighlighter 
-                      language="jsx" 
+                      language="jsx"
                       style={nightOwl}
                       wrapLongLines={true}
-                      customStyle={{ fontSize: '12px', overflow: 'hidden' }}
+                      customStyle={{ fontSize: '12px', overflow: 'hidden', backgroundColor: 'transparent' }}
                     >
-                      {`import { love, support } from 'family'\nimport { code, design } from 'career'\nimport { grind, bounceBack } from 'basketball'\nimport { build, tune } from 'carCulture'\nimport { useState } from 'react'\n\nfunction CarlLife() {\n  const [energy, setEnergy] = useState(100)\n\n  return (\n\t<Life fueledBy={[love, support]}>\n\t  <Code passion />\n\t  <Design soul />\n\t  <Court grind={grind} dream="NBA" />\n\t  <Garage project="Honda EF" vibe="stanced" />\n\t  <Goals target="Senior Dev by 28" />\n\t</Life>\n  )\n}`}
+                      {typedCode}
                     </SyntaxHighlighter>
                   </div>
                 </div>
