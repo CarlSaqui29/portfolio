@@ -46,8 +46,8 @@ export default function Navbar() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.rainbow ? 'hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'text-gray-300 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm',
+                      item.rainbow ? 'text-base hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'text-gray-300 hover:text-white',
+                      'rounded-md px-3 py-2 text-base',
                     )}
                   >
                     {
@@ -137,7 +137,7 @@ export default function Navbar() {
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
+                'block rounded-md px-3 py-2 text-base',
               )}
             >
               {item.name}

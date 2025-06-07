@@ -62,7 +62,7 @@ export default function Bento() {
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">
                   Aspiring Basketball Player
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
                   Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
                 </p>
               </div>
@@ -83,7 +83,7 @@ export default function Bento() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">Designer</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function Bento() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">Car Enthusiast</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
                   Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
                 </p>
               </div>
@@ -123,14 +123,14 @@ export default function Bento() {
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">
                   Software Developer
                 </p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">
+                <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
                   Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
                 </p>
               </div>
               <div className="relative min-h-120 w-full grow">
                 <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
                   <div className="flex bg-gray-800/40 ring-1 ring-white/5">
-                    <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
+                    <div className="-mb-px flex text-base font-medium text-gray-400">
                       <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
                         payDebt.jsx
                       </div>
