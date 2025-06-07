@@ -46,7 +46,7 @@ export default function Navbar() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.rainbow ? 'text-base hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'text-gray-300 hover:text-white',
+                      item.rainbow ? 'text-base hover:scale-105 rainbow-glow' : 'text-gray-300 hover:text-white',
                       'rounded-md px-3 py-2 text-base',
                     )}
                   >

@@ -33,3 +33,21 @@ body {
   width: 100%;
   height: 20px;
 }
+
+@keyframes rainbow-glow {
+  0%   { filter: drop-shadow(0 0 8px red); }
+  10%  { filter: drop-shadow(0 0 8px orange); }
+  20%  { filter: drop-shadow(0 0 8px gold); }
+  30%  { filter: drop-shadow(0 0 8px yellow); }
+  40%  { filter: drop-shadow(0 0 8px lime); }
+  50%  { filter: drop-shadow(0 0 8px turquoise); }
+  60%  { filter: drop-shadow(0 0 8px cyan); }
+  70%  { filter: drop-shadow(0 0 8px blue); }
+  80%  { filter: drop-shadow(0 0 8px indigo); }
+  90%  { filter: drop-shadow(0 0 8px violet); }
+  100% { filter: drop-shadow(0 0 8px red); } /* loop back to red */
+}
+
+.rainbow-glow {
+  animation: rainbow-glow 3s linear infinite;
+}
