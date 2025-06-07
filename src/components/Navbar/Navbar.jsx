@@ -1,5 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { BeakerIcon } from '@heroicons/react/24/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDribbble } from '@fortawesome/free-brands-svg-icons';
 import bro from '../../assets/bro.jpg';
@@ -7,7 +8,7 @@ import bro from '../../assets/bro.jpg';
 const navigation = [
   { name: 'About Me', href: '#', current: true },
   { name: 'Projects', href: '#', current: false },
-  { name: 'Lab', href: '#', current: false },
+  { name: 'Lab', href: '#', current: false, rainbow: true},
 ]
 
 function classNames(...classes) {
@@ -45,11 +46,40 @@ export default function Navbar() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      item.rainbow ? 'hover:scale-105 hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)]' : 'text-gray-300 hover:text-white',
+                      'rounded-md px-3 py-2 text-sm',
                     )}
                   >
-                    {item.name}
+                    {
+                      item.name === 'Lab' ? (
+                        <span className="flex items-center gap-2">
+                          <span className="bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 bg-clip-text text-transparent">
+                            {item.name}
+                          </span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            className="h-5 w-5"
+                          >
+                            <defs>
+                              <linearGradient id="labGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#ef4444" /> {/* red-500 */}
+                                <stop offset="50%" stopColor="#facc15" /> {/* yellow-500 */}
+                                <stop offset="100%" stopColor="#3b82f6" /> {/* blue-500 */}
+                              </linearGradient>
+                            </defs>
+                            <path
+                              fill="url(#labGradient)"
+                              fillRule="evenodd"
+                              d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                      ) : (
+                        <span>{item.name}</span>
+                      )
+                    }
                   </a>
                 ))}
               </div>

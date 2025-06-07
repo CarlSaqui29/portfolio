@@ -23,7 +23,7 @@ export default function Hero() {
             </div>
             <p className='mt-10'>Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</p>
             <button className="mt-8 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">
-              Hire Me
+              Buy me coffee
             </button>
           </div>
         </div>
