@@ -3,7 +3,7 @@ import jakeTheDev from '../../assets/jake-the-dev.webp';
 export default function Hero() {
 
   return(
-    <div className="pt-24 pb-12 sm:pt-32 sm:pb-16">
+    <div className="pt-24 pb-14 sm:pt-32 sm:pb-16">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24">
           <div className="">
