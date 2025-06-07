@@ -53,7 +53,7 @@ export default function Navbar() {
                     {
                       item.name === 'Lab' ? (
                         <span className="flex items-center gap-2">
-                          <span className="bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 bg-clip-text text-transparent">
+                          <span className="bg-[linear-gradient(45deg,_#f87171,_#facc15,_#3b82f6)] bg-clip-text text-transparent">
                             {item.name}
                           </span>
                           <svg
