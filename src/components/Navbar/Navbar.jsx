@@ -21,7 +21,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="sticky top-0 z-50 bg-transparent">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <span className="absolute -inset-0.5" />
@@ -30,8 +30,8 @@ export default function Navbar() {
               <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
             </DisclosureButton>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="hidden sm:flex shrink-0 items-center">
+          <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
+            <div className="sm:flex shrink-0 items-center">
               <img
                 alt="Carl Saqui"
                 src={bro}
@@ -47,7 +47,7 @@ export default function Navbar() {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.rainbow ? 'text-base hover:scale-105 rainbow-glow' : 'text-gray-300 hover:text-white',
-                      'rounded-md px-3 py-2 text-base',
+                      'px-3 py-2 text-base',
                     )}
                   >
                     {
@@ -85,44 +85,46 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <a
-              href="https://github.com/CarlSaqui29"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="m-2"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="text-xl text-gray-400 hover:text-white"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/carlsaqui/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="m-2"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="text-xl text-gray-400 hover:text-white"
-              />
-            </a>
-            <a
-              href="https://dribbble.com/DevWil"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Dribbble"
-              className="m-2"
-            >
-              <FontAwesomeIcon
-                icon={faDribbble}
-                className="text-xl text-gray-400 hover:text-white"
-              />
-            </a>
+          <div className="hidden sm:block">
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 sm:block">
+              <a
+                href="https://github.com/CarlSaqui29"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="m-2"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-xl text-gray-400 hover:text-white"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/carlsaqui/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="m-2"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="text-xl text-gray-400 hover:text-white"
+                />
+              </a>
+              <a
+                href="https://dribbble.com/DevWil"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Dribbble"
+                className="m-2"
+              >
+                <FontAwesomeIcon
+                  icon={faDribbble}
+                  className="text-xl text-gray-400 hover:text-white"
+                />
+              </a>
 
+            </div>
           </div>
         </div>
       </div>
@@ -136,13 +138,81 @@ export default function Navbar() {
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base',
+                item.rainbow ? 'text-base rainbow-glow' : 'text-gray-300 hover:text-white',
+                'block px-3 py-2 text-base',
               )}
             >
-              {item.name}
+              {
+                item.name === 'Lab' ? (
+                  <span className="flex items-center gap-2">
+                    <span className="bg-[linear-gradient(45deg,_#f87171,_#facc15,_#3b82f6)] bg-clip-text text-transparent">
+                      {item.name}
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      className="h-5 w-5"
+                    >
+                      <defs>
+                        <linearGradient id="labGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#ef4444" />
+                          <stop offset="50%" stopColor="#facc15" />
+                          <stop offset="100%" stopColor="#3b82f6" />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        fill="url(#labGradient2)"
+                        fillRule="evenodd"
+                        d="M10.5 3.798v5.02a3 3 0 0 1-.879 2.121l-2.377 2.377a9.845 9.845 0 0 1 5.091 1.013 8.315 8.315 0 0 0 5.713.636l.285-.071-3.954-3.955a3 3 0 0 1-.879-2.121v-5.02a23.614 23.614 0 0 0-3 0Zm4.5.138a.75.75 0 0 0 .093-1.495A24.837 24.837 0 0 0 12 2.25a25.048 25.048 0 0 0-3.093.191A.75.75 0 0 0 9 3.936v4.882a1.5 1.5 0 0 1-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0 1 15 8.818V3.936Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                ) : (
+                  <span>{item.name}</span>
+                )
+              }
             </DisclosureButton>
           ))}
+          <div class="h-px bg-gray-300 my-4"></div>
+          <div className="flex items-center pr-2 sm:ml-6 sm:pr-0">
+              <a
+                href="https://github.com/CarlSaqui29"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="m-2"
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className="text-2xl text-gray-400 hover:text-white"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/carlsaqui/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="m-2"
+              >
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="text-2xl text-gray-400 hover:text-white"
+                />
+              </a>
+              <a
+                href="https://dribbble.com/DevWil"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Dribbble"
+                className="m-2"
+              >
+                <FontAwesomeIcon
+                  icon={faDribbble}
+                  className="text-2xl text-gray-400 hover:text-white"
+                />
+              </a>
+          </div>
         </div>
       </DisclosurePanel>
     </Disclosure>
