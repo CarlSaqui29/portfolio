@@ -3,7 +3,7 @@ import jakeTheDev from '../../assets/jake-the-dev.webp';
 export default function Hero() {
 
   return(
-    <div className="py-24 sm:py-32">
+    <div className="pt-24 pb-12 sm:pt-32 sm:pb-16">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-24">
           <div className="">
@@ -22,7 +22,7 @@ export default function Hero() {
                         fill="none" stroke="#f44336" stroke-width="3"/>
                 </svg>
               </div>
-              <p className='mt-8 md:mt-10'>Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</p>
+              <p className='mt-8 md:mt-10'>I know what I want. My goals guide me, my priorities ground me, my plans push me and success is non-negotiable.</p>
               <button className="mt-8 px-6 py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 transition">
                 Buy me coffee
               </button>

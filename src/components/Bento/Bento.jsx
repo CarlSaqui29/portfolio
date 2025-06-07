@@ -48,11 +48,11 @@ export default function Bento() {
   }, [index]);
   
   return (
-    <div className="py-24 sm:py-32">
+    <div className="py-12 sm:py-16">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <h2 className="text-center text-base/7 font-semibold text-indigo-custom">About Me</h2>
         <p className="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-          Developing my skills while reaching my dreams
+          No rest days
         </p>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
           <div className="relative lg:row-span-2">
@@ -60,10 +60,10 @@ export default function Bento() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
               <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">
-                  Aspiring Basketball Player
+                  Basketball Player
                 </p>
                 <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                  Rebuilding the dreams I once buried. Reclaiming what was mine.
                 </p>
               </div>
               <div className="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
@@ -84,7 +84,7 @@ export default function Bento() {
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">Designer</p>
                 <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
+                  Every pixel tells a story. And I’m here to design yours.
                 </p>
               </div>
               <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
@@ -103,7 +103,7 @@ export default function Bento() {
               <div className="px-8 pt-8 sm:px-10 sm:pt-10">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-100 max-lg:text-center">Car Enthusiast</p>
                 <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
+                  More than just a car, it’s my escape.
                 </p>
               </div>
               <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
@@ -124,7 +124,7 @@ export default function Bento() {
                   Software Developer
                 </p>
                 <p className="mt-2 max-w-lg text-base text-gray-400 max-lg:text-center">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.
+                  Driven by purpose and intent—always evolving, always creating.
                 </p>
               </div>
               <div className="relative min-h-120 w-full grow">
