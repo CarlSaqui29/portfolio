@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="relative flex h-12 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-full p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
@@ -186,14 +186,14 @@ export default function Navbar() {
               }
             </DisclosureButton>
           ))}
-          <div class="h-px bg-gray-300 my-4"></div>
+          <div class="h-px bg-gray-300/30 my-4"></div>
           <div className="flex items-center pr-2 sm:ml-6 sm:pr-0">
               <a
                 href="https://github.com/CarlSaqui29"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="m-2"
+                className="m-3"
               >
                 <FontAwesomeIcon
                   icon={faGithub}
@@ -205,7 +205,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="m-2"
+                className="m-3"
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
@@ -217,7 +217,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Dribbble"
-                className="m-2"
+                className="m-3"
               >
                 <FontAwesomeIcon
                   icon={faDribbble}
