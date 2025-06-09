@@ -4,6 +4,7 @@ import { BeakerIcon } from '@heroicons/react/24/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDribbble } from '@fortawesome/free-brands-svg-icons';
 import bro from '../../assets/bro.jpg';
+import { useEffect, useState } from 'react';
 
 const navigation = [
   { name: 'About Me', href: '#', current: true },
@@ -16,11 +17,22 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-    <Disclosure as="nav" className="sticky top-0 z-50 bg-transparent">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
+    <Disclosure as="nav" className="sticky top-5 z-50 bg-transparent mx-3">
+      <div className={`mx-auto max-w-7xl px-2 border border-transparent ${scrolled ? 'bg-black/55 backdrop-blur-lg border-black rounded-full' : ''}`}>
+        <div className="relative flex h-12 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
             {/* Mobile menu button*/}
             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
